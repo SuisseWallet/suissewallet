@@ -1,7 +1,7 @@
 # Suisse Wallet
 
 <p align="center">
-  <img src="public/logo.png" alt="Suisse Wallet Logo" width="120"/>
+  <img src="logo.png" alt="Suisse Wallet Logo" width="120"/>
 </p>
 
 <p align="center">
