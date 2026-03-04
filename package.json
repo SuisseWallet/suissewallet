@@ -1,0 +1,108 @@
+{
+  "name": "suissewallet",
+  "version": "2.4.0",
+  "description": "Non-custodial cryptocurrency wallet with Swiss-grade security",
+  "main": "dist/main/index.js",
+  "author": "Suisse Wallet Team",
+  "homepage": "https://suissewallet.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuisseWallet/suissewallet.git"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\"",
+    "dev:main": "electron-esbuild dev",
+    "dev:renderer": "vite",
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "electron-esbuild build",
+    "build:renderer": "vite build",
+    "package:win": "electron-builder --win --x64",
+    "package:mac": "electron-builder --mac --x64 --arm64",
+    "package:all": "electron-builder --win --mac",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "argon2-browser": "^1.18.0",
+    "axios": "^1.6.2",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "ecpair": "^2.1.0",
+    "tiny-secp256k1": "^2.2.3",
+    "ed25519-hd-key": "^1.3.0",
+    "buffer": "^6.0.3",
+    "crypto-js": "^4.2.0",
+    "electron-store": "^8.1.0",
+    "ethers": "^6.9.0",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.299.0",
+    "monero-javascript": "^0.9.3",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.21.1",
+    "uuid": "^9.0.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/crypto-js": "^4.2.1",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.1.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "electron-esbuild": "^4.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "build": {
+    "appId": "io.suissewallet.app",
+    "productName": "Suisse Wallet",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "public/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "public/icon.icns",
+      "category": "public.app-category.finance"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
