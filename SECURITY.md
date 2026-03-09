@@ -6,9 +6,8 @@ If you discover a security vulnerability in Suisse Wallet, please report it resp
 
 ### How to Report
 
-1. **Email:** security@suissewallet.io
-2. **Subject:** [SECURITY] Brief description
-3. **Encrypt:** Use our PGP key (below)
+1. **Telegram:** [t.me/Suisse_Wallet](https://t.me/Suisse_Wallet)
+2. **Twitter:** [@suissewallet](https://x.com/suissewallet)
 
 ### What to Include
 
@@ -117,5 +116,5 @@ We offer rewards for responsibly disclosed vulnerabilities:
 
 ## Contact
 
-- Security issues: security@suissewallet.io
-- General support: support@suissewallet.io
+- Security issues: [t.me/Suisse_Wallet](https://t.me/Suisse_Wallet)
+- General support: [t.me/Suisse_Wallet](https://t.me/Suisse_Wallet)

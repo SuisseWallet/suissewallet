@@ -270,7 +270,8 @@ We welcome contributions! Please read our contributing guidelines before submitt
 
 - **Website:** [suissewallet.io](https://suissewallet.io)
 - **Twitter:** [@suissewallet](https://x.com/suissewallet)
-- **Email:** support@suissewallet.io
+- **Telegram:** [t.me/Suisse_Wallet](https://t.me/Suisse_Wallet)
+- **Docs:** [GitBook](https://suisse-wallet.gitbook.io/docs)
 
 ---
 

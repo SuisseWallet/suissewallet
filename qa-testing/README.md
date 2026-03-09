@@ -134,4 +134,4 @@ Before submitting your test report:
 
 ## 📞 Support
 
-Questions? Contact: qa@suissewallet.io
+Questions? Contact us via [Telegram](https://t.me/Suisse_Wallet).
