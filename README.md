@@ -26,7 +26,7 @@ Suisse Wallet is a non-custodial cryptocurrency wallet with Swiss-grade security
 
 ### What's New in v2.4
 - Multi-currency invoice support
-- Clients can pay in BTC, ETH, USDT, or XMR
+- Clients can pay in BTC, ETH, XMR, or SOL
 - Automatic conversion via atomic swap at invoice confirmation
 
 ---
@@ -47,18 +47,8 @@ Suisse Wallet is a non-custodial cryptocurrency wallet with Swiss-grade security
 |----------|--------|---------|
 | Bitcoin | BTC | Bitcoin Mainnet |
 | Ethereum | ETH | Ethereum |
-| Tether | USDT | ERC-20 / TRC-20 |
 | Monero | XMR | Monero |
 | Solana | SOL | Solana |
-| BNB | BNB | BNB Chain |
-| Cardano | ADA | Cardano |
-| XRP | XRP | Ripple |
-| Litecoin | LTC | Litecoin |
-| Avalanche | AVAX | Avalanche C-Chain |
-| Polygon | MATIC | Polygon |
-| Tron | TRX | Tron |
-
-*Architecture supports 15,000+ tokens via modular chain adapters.*
 
 ---
 
@@ -73,7 +63,7 @@ Suisse Wallet is a non-custodial cryptocurrency wallet with Swiss-grade security
 
 ```bash
 # Clone the repository
-git clone https://github.com/AnonimPlayer/suissewallet.git
+git clone https://github.com/SuisseWallet/suissewallet.git
 cd suissewallet
 
 # Install dependencies
@@ -150,9 +140,6 @@ VITE_NETWORK_MODE=mainnet  # mainnet | testnet
 # Testnet RPCs (for development)
 VITE_ETH_TESTNET_RPC=https://sepolia.infura.io/v3/YOUR_KEY
 VITE_BTC_TESTNET=true
-
-# API Keys (optional)
-VITE_COINGECKO_API_KEY=your_key
 ```
 
 ---
@@ -168,7 +155,6 @@ For development and QA testing, use these testnet networks:
 | BTC | Testnet3 | [coinfaucet.eu](https://coinfaucet.eu/en/btc-testnet/) |
 | ETH | Sepolia | [sepoliafaucet.com](https://sepoliafaucet.com/) |
 | SOL | Devnet | [solfaucet.com](https://solfaucet.com/) |
-| MATIC | Mumbai | [faucet.polygon.technology](https://faucet.polygon.technology/) |
 
 ### Running Tests
 
@@ -226,16 +212,12 @@ See [qa-testing/](qa-testing/) folder for:
 |---------|-------------|
 | **AES-256 Encryption** | All sensitive data encrypted at rest |
 | **Local Key Storage** | Private keys never leave your device |
-| **Self-Destruct PIN** | Decoy wallet under duress |
-| **Biometric Auth** | Fingerprint/Face ID support |
 | **Auto-Lock** | Configurable timeout |
 | **Secure Memory** | Keys cleared from RAM after use |
 
 ### Backup & Recovery
 
-- **12/24-word seed phrase** (BIP-39)
-- **Encrypted backup file** option
-- **Multi-signature support** (coming soon)
+- **24-word seed phrase** (BIP-39)
 
 ---
 
@@ -243,12 +225,11 @@ See [qa-testing/](qa-testing/) folder for:
 
 | Action | Fee |
 |--------|-----|
-| Storage | 0% |
-| Send/Receive | 0.1% |
-| P2P Trade | 0.3% |
+| Send/Receive | Network fee only |
 | Swap | 0.3% |
-| Ghost Mode | 0.3% |
-| Invoice | 0.5% |
+| P2P Trade (seller) | 0.5% |
+| Ghost Mode | 0.5% |
+| Invoice | Free |
 
 *Network fees (gas) are separate and paid to miners/validators.*
 
